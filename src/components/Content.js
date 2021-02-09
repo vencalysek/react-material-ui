@@ -24,15 +24,22 @@ const Content = () => {
   }, []);
 
   return (
+    // <Grid container spacing={3}>
     <Grid container spacing={3}>
-        {recipes.map(recipe => (
-      <Grid container item alignContent='stretch' justify="center" item xs={12} sm={6} lg={4}>
+      {recipes.map(recipe => (
+        <Grid
+          item
+          alignContent="stretch"
+          justify="center"
+          xs={12}
+          sm={6}
+          md={4}
+          lg={3}>
           <Box width={1}>
             <CardComponent recipe={recipe.recipe} />
           </Box>
-      </Grid>
-        ))}
-    </Grid>
+        </Grid>
+      ))}</Grid>
   );
 };
 
